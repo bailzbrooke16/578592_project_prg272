@@ -50,7 +50,25 @@
             label4 = new Label();
             label5 = new Label();
             textBox5 = new TextBox();
+            label6 = new Label();
+            textBox6 = new TextBox();
+            label7 = new Label();
+            richTextBox1 = new RichTextBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            label8 = new Label();
+            pictureBox1 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            Student_Number = new DataGridViewTextBoxColumn();
+            Full_Name = new DataGridViewTextBoxColumn();
+            DOB = new DataGridViewTextBoxColumn();
+            Gender = new DataGridViewTextBoxColumn();
+            Phone = new DataGridViewTextBoxColumn();
+            Address = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -106,14 +124,14 @@
             // viewAllToolStripMenuItem1
             // 
             viewAllToolStripMenuItem1.Name = "viewAllToolStripMenuItem1";
-            viewAllToolStripMenuItem1.Size = new Size(180, 22);
+            viewAllToolStripMenuItem1.Size = new Size(135, 22);
             viewAllToolStripMenuItem1.Text = "View All";
             viewAllToolStripMenuItem1.Click += viewAllToolStripMenuItem1_Click;
             // 
             // createNewToolStripMenuItem1
             // 
             createNewToolStripMenuItem1.Name = "createNewToolStripMenuItem1";
-            createNewToolStripMenuItem1.Size = new Size(180, 22);
+            createNewToolStripMenuItem1.Size = new Size(135, 22);
             createNewToolStripMenuItem1.Text = "Create New";
             createNewToolStripMenuItem1.Click += createNewToolStripMenuItem1_Click;
             // 
@@ -196,7 +214,7 @@
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.Location = new Point(45, 182);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(191, 23);
             dateTimePicker1.TabIndex = 12;
             dateTimePicker1.Value = new DateTime(2024, 8, 13, 0, 0, 0, 0);
             // 
@@ -225,11 +243,139 @@
             textBox5.Size = new Size(191, 23);
             textBox5.TabIndex = 14;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(623, 164);
+            label6.Name = "label6";
+            label6.Size = new Size(88, 15);
+            label6.TabIndex = 17;
+            label6.Text = "Phone Number";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(572, 182);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(191, 23);
+            textBox6.TabIndex = 16;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(187, 235);
+            label7.Name = "label7";
+            label7.Size = new Size(49, 15);
+            label7.TabIndex = 19;
+            label7.Text = "Address";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(45, 253);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(371, 91);
+            richTextBox1.TabIndex = 20;
+            richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(453, 286);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 21;
+            button1.Text = "Save";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(572, 286);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 22;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(688, 286);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 23);
+            button3.TabIndex = 23;
+            button3.Text = "Linked Modules";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(898, 89);
+            label8.Name = "label8";
+            label8.Size = new Size(40, 15);
+            label8.TabIndex = 24;
+            label8.Text = "Image";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(847, 117);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(139, 133);
+            pictureBox1.TabIndex = 25;
+            pictureBox1.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Student_Number, Full_Name, DOB, Gender, Phone, Address });
+            dataGridView1.Location = new Point(43, 390);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1071, 245);
+            dataGridView1.TabIndex = 26;
+            // 
+            // Student_Number
+            // 
+            Student_Number.HeaderText = "Student Number";
+            Student_Number.Name = "Student_Number";
+            // 
+            // Full_Name
+            // 
+            Full_Name.HeaderText = "Full Name";
+            Full_Name.Name = "Full_Name";
+            // 
+            // DOB
+            // 
+            DOB.HeaderText = "DOB";
+            DOB.Name = "DOB";
+            // 
+            // Gender
+            // 
+            Gender.HeaderText = "Gender";
+            Gender.Name = "Gender";
+            // 
+            // Phone
+            // 
+            Phone.HeaderText = "Phone";
+            Phone.Name = "Phone";
+            // 
+            // Address
+            // 
+            Address.HeaderText = "Address";
+            Address.Name = "Address";
+            // 
             // ViewAllStudents
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1126, 647);
+            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox1);
+            Controls.Add(label8);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(richTextBox1);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(textBox6);
             Controls.Add(label5);
             Controls.Add(textBox5);
             Controls.Add(label4);
@@ -245,9 +391,12 @@
             Controls.Add(btnLogout);
             Controls.Add(menuStrip1);
             Name = "ViewAllStudents";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewAllStudents";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -276,5 +425,21 @@
         private Label label4;
         private Label label5;
         private TextBox textBox5;
+        private Label label6;
+        private TextBox textBox6;
+        private Label label7;
+        private RichTextBox richTextBox1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Label label8;
+        private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Student_Number;
+        private DataGridViewTextBoxColumn Full_Name;
+        private DataGridViewTextBoxColumn DOB;
+        private DataGridViewTextBoxColumn Gender;
+        private DataGridViewTextBoxColumn Phone;
+        private DataGridViewTextBoxColumn Address;
     }
 }

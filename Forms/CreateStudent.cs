@@ -16,5 +16,12 @@ namespace _578592_project_prg272.Forms
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ViewAllStudents viewAllStudents = new ViewAllStudents();
+            viewAllStudents.Show();
+            this.Close();
+        }
     }
 }

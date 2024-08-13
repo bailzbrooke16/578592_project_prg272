@@ -16,5 +16,45 @@ namespace _578592_project_prg272.Forms
         {
             InitializeComponent();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void viewAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewAllStudents students = new ViewAllStudents();
+            students.Show();
+            this.Close();
+        }
+
+        private void createNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateStudent createStudent = new CreateStudent();
+            createStudent.Show();
+            this.Close();
+        }
+
+        private void createNewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CreateModule createModule = new CreateModule();
+            createModule.Show();
+            this.Close();
+        }
+
+        private void ViewAllModules_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }
