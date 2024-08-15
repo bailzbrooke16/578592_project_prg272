@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             label6 = new Label();
-            textBox6 = new TextBox();
+            txtPhoneNumber = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            txtGender = new TextBox();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpDateOfBirth = new DateTimePicker();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txtStudentNumber = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtLastName = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
-            button2 = new Button();
+            txtFirstName = new TextBox();
+            btnCreate = new Button();
             btnCancel = new Button();
-            richTextBox1 = new RichTextBox();
+            rtbAddress = new RichTextBox();
             label7 = new Label();
             label8 = new Label();
             openFileDialog1 = new OpenFileDialog();
-            button3 = new Button();
+            btnUploadImage = new Button();
             label9 = new Label();
             SuspendLayout();
             // 
@@ -59,12 +59,12 @@
             label6.TabIndex = 29;
             label6.Text = "Phone Number";
             // 
-            // textBox6
+            // txtPhoneNumber
             // 
-            textBox6.Location = new Point(557, 158);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(191, 23);
-            textBox6.TabIndex = 28;
+            txtPhoneNumber.Location = new Point(557, 158);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(191, 23);
+            txtPhoneNumber.TabIndex = 28;
             // 
             // label5
             // 
@@ -75,12 +75,12 @@
             label5.TabIndex = 27;
             label5.Text = "Gender";
             // 
-            // textBox5
+            // txtGender
             // 
-            textBox5.Location = new Point(291, 158);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(191, 23);
-            textBox5.TabIndex = 26;
+            txtGender.Location = new Point(291, 158);
+            txtGender.Name = "txtGender";
+            txtGender.Size = new Size(191, 23);
+            txtGender.TabIndex = 26;
             // 
             // label4
             // 
@@ -91,14 +91,14 @@
             label4.TabIndex = 25;
             label4.Text = "Date of Birth";
             // 
-            // dateTimePicker1
+            // dtpDateOfBirth
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(30, 158);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(191, 23);
-            dateTimePicker1.TabIndex = 24;
-            dateTimePicker1.Value = new DateTime(2024, 8, 13, 0, 0, 0, 0);
+            dtpDateOfBirth.Format = DateTimePickerFormat.Short;
+            dtpDateOfBirth.Location = new Point(30, 158);
+            dtpDateOfBirth.Name = "dtpDateOfBirth";
+            dtpDateOfBirth.Size = new Size(191, 23);
+            dtpDateOfBirth.TabIndex = 24;
+            dtpDateOfBirth.Value = new DateTime(2024, 8, 13, 0, 0, 0, 0);
             // 
             // label3
             // 
@@ -109,12 +109,12 @@
             label3.TabIndex = 23;
             label3.Text = "Student Number";
             // 
-            // textBox4
+            // txtStudentNumber
             // 
-            textBox4.Location = new Point(557, 83);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(191, 23);
-            textBox4.TabIndex = 22;
+            txtStudentNumber.Location = new Point(557, 83);
+            txtStudentNumber.Name = "txtStudentNumber";
+            txtStudentNumber.Size = new Size(191, 23);
+            txtStudentNumber.TabIndex = 22;
             // 
             // label2
             // 
@@ -125,12 +125,12 @@
             label2.TabIndex = 21;
             label2.Text = "Last Name";
             // 
-            // textBox3
+            // txtLastName
             // 
-            textBox3.Location = new Point(291, 83);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(191, 23);
-            textBox3.TabIndex = 20;
+            txtLastName.Location = new Point(291, 83);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(191, 23);
+            txtLastName.TabIndex = 20;
             // 
             // label1
             // 
@@ -141,21 +141,22 @@
             label1.TabIndex = 19;
             label1.Text = "First Name";
             // 
-            // textBox2
+            // txtFirstName
             // 
-            textBox2.Location = new Point(30, 83);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(191, 23);
-            textBox2.TabIndex = 18;
+            txtFirstName.Location = new Point(30, 83);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(191, 23);
+            txtFirstName.TabIndex = 18;
             // 
-            // button2
+            // btnCreate
             // 
-            button2.Location = new Point(398, 365);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 33;
-            button2.Text = "Create";
-            button2.UseVisualStyleBackColor = true;
+            btnCreate.Location = new Point(398, 365);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(75, 23);
+            btnCreate.TabIndex = 33;
+            btnCreate.Text = "Create";
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnCancel
             // 
@@ -167,13 +168,13 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
-            // richTextBox1
+            // rtbAddress
             // 
-            richTextBox1.Location = new Point(30, 207);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(371, 91);
-            richTextBox1.TabIndex = 31;
-            richTextBox1.Text = "";
+            rtbAddress.Location = new Point(30, 207);
+            rtbAddress.Name = "rtbAddress";
+            rtbAddress.Size = new Size(371, 91);
+            rtbAddress.TabIndex = 31;
+            rtbAddress.Text = "";
             // 
             // label7
             // 
@@ -198,14 +199,15 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button3
+            // btnUploadImage
             // 
-            button3.Location = new Point(488, 249);
-            button3.Name = "button3";
-            button3.Size = new Size(137, 23);
-            button3.TabIndex = 35;
-            button3.Text = "Upload";
-            button3.UseVisualStyleBackColor = true;
+            btnUploadImage.Location = new Point(488, 249);
+            btnUploadImage.Name = "btnUploadImage";
+            btnUploadImage.Size = new Size(137, 23);
+            btnUploadImage.TabIndex = 35;
+            btnUploadImage.Text = "Upload";
+            btnUploadImage.UseVisualStyleBackColor = true;
+            btnUploadImage.Click += btnUploadImage_Click;
             // 
             // label9
             // 
@@ -222,24 +224,24 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label9);
-            Controls.Add(button3);
+            Controls.Add(btnUploadImage);
             Controls.Add(label8);
-            Controls.Add(button2);
+            Controls.Add(btnCreate);
             Controls.Add(btnCancel);
-            Controls.Add(richTextBox1);
+            Controls.Add(rtbAddress);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(textBox6);
+            Controls.Add(txtPhoneNumber);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(txtGender);
             Controls.Add(label4);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpDateOfBirth);
             Controls.Add(label3);
-            Controls.Add(textBox4);
+            Controls.Add(txtStudentNumber);
             Controls.Add(label2);
-            Controls.Add(textBox3);
+            Controls.Add(txtLastName);
             Controls.Add(label1);
-            Controls.Add(textBox2);
+            Controls.Add(txtFirstName);
             Name = "CreateStudent";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CreateStudent";
@@ -250,24 +252,24 @@
         #endregion
 
         private Label label6;
-        private TextBox textBox6;
+        private TextBox txtPhoneNumber;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox txtGender;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpDateOfBirth;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txtStudentNumber;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtLastName;
         private Label label1;
-        private TextBox textBox2;
-        private Button button2;
+        private TextBox txtFirstName;
+        private Button btnCreate;
         private Button btnCancel;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbAddress;
         private Label label7;
         private Label label8;
         private OpenFileDialog openFileDialog1;
-        private Button button3;
+        private Button btnUploadImage;
         private Label label9;
     }
 }

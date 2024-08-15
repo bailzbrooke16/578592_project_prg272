@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Core;
+using Core.Interfaces;
+using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,13 @@ namespace _578592_project_prg272.Forms
 {
     public partial class ViewAllModules : Form
     {
+        private readonly IModuleService _moduleService;
+        private Module selectedModule;
         public ViewAllModules()
         {
+            _moduleService = new ModuleService();
             InitializeComponent();
+            dgvModules.DataSource = _moduleService.getAllModules();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +62,46 @@ namespace _578592_project_prg272.Forms
             Login login = new Login();
             login.Show();
             this.Close();
+        }
+
+        private void dgvModules_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvModules.SelectedRows.Count > 0)
+            {
+                this.selectedModule = (Module)dgvModules.SelectedRows[0].DataBoundItem;
+                txtCode.Text = this.selectedModule.code.ToString();
+                txtName.Text = this.selectedModule.name;
+                rtbDescription.Text = this.selectedModule.description;
+                rtbLinks.Text = this.selectedModule.links;
+
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (this.selectedModule != null)
+            {
+                _moduleService.deleteModule(this.selectedModule.code);
+                clearFields();
+                dgvModules.DataSource = _moduleService.getAllModules();
+            }
+
+        }
+
+        private void clearFields()
+        {
+            txtCode.Text = "";
+            txtName.Text = "";
+            rtbDescription.Text = "";
+            rtbLinks.Text = "";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(this.selectedModule != null)
+            {
+                _moduleService.updateModule(this.selectedModule);
+            }
         }
     }
 }

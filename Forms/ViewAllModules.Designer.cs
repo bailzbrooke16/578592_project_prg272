@@ -37,26 +37,22 @@
             moduleToolStripMenuItem = new ToolStripMenuItem();
             viewAllToolStripMenuItem1 = new ToolStripMenuItem();
             createNewToolStripMenuItem1 = new ToolStripMenuItem();
-            richTextBox1 = new RichTextBox();
+            rtbDescription = new RichTextBox();
             label7 = new Label();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtName = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtCode = new TextBox();
             btnSearch = new Button();
             textBox1 = new TextBox();
-            richTextBox2 = new RichTextBox();
+            rtbLinks = new RichTextBox();
             label3 = new Label();
             btnLogout = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            dataGridView1 = new DataGridView();
-            Module_Code = new DataGridViewTextBoxColumn();
-            Module_Name = new DataGridViewTextBoxColumn();
-            Description = new DataGridViewTextBoxColumn();
-            Links = new DataGridViewTextBoxColumn();
+            btnSave = new Button();
+            btnDelete = new Button();
+            dgvModules = new DataGridView();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvModules).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -123,22 +119,22 @@
             createNewToolStripMenuItem1.Text = "Create New";
             createNewToolStripMenuItem1.Click += createNewToolStripMenuItem1_Click;
             // 
-            // richTextBox1
+            // rtbDescription
             // 
-            richTextBox1.Location = new Point(36, 162);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(407, 91);
-            richTextBox1.TabIndex = 28;
-            richTextBox1.Text = "";
+            rtbDescription.Location = new Point(36, 162);
+            rtbDescription.Name = "rtbDescription";
+            rtbDescription.Size = new Size(407, 91);
+            rtbDescription.TabIndex = 28;
+            rtbDescription.Text = "";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(178, 144);
             label7.Name = "label7";
-            label7.Size = new Size(49, 15);
+            label7.Size = new Size(67, 15);
             label7.TabIndex = 27;
-            label7.Text = "Address";
+            label7.Text = "Description";
             // 
             // label2
             // 
@@ -149,12 +145,12 @@
             label2.TabIndex = 26;
             label2.Text = "Module Name";
             // 
-            // textBox3
+            // txtName
             // 
-            textBox3.Location = new Point(252, 100);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(191, 23);
-            textBox3.TabIndex = 25;
+            txtName.Location = new Point(252, 100);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(191, 23);
+            txtName.TabIndex = 25;
             // 
             // label1
             // 
@@ -165,12 +161,12 @@
             label1.TabIndex = 24;
             label1.Text = "Module Code";
             // 
-            // textBox2
+            // txtCode
             // 
-            textBox2.Location = new Point(36, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(191, 23);
-            textBox2.TabIndex = 23;
+            txtCode.Location = new Point(36, 100);
+            txtCode.Name = "txtCode";
+            txtCode.Size = new Size(191, 23);
+            txtCode.TabIndex = 23;
             // 
             // btnSearch
             // 
@@ -188,13 +184,13 @@
             textBox1.Size = new Size(292, 23);
             textBox1.TabIndex = 21;
             // 
-            // richTextBox2
+            // rtbLinks
             // 
-            richTextBox2.Location = new Point(485, 100);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(291, 153);
-            richTextBox2.TabIndex = 29;
-            richTextBox2.Text = "";
+            rtbLinks.Location = new Point(485, 100);
+            rtbLinks.Name = "rtbLinks";
+            rtbLinks.Size = new Size(291, 153);
+            rtbLinks.TabIndex = 29;
+            rtbLinks.Text = "";
             // 
             // label3
             // 
@@ -215,71 +211,53 @@
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
-            // button1
+            // btnSave
             // 
-            button1.Location = new Point(836, 136);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 32;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
+            btnSave.Location = new Point(836, 136);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 23);
+            btnSave.TabIndex = 32;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
-            // button2
+            // btnDelete
             // 
-            button2.Location = new Point(836, 188);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 33;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(836, 188);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(75, 23);
+            btnDelete.TabIndex = 33;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // dataGridView1
+            // dgvModules
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Module_Code, Module_Name, Description, Links });
-            dataGridView1.Location = new Point(12, 278);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(942, 283);
-            dataGridView1.TabIndex = 34;
-            // 
-            // Module_Code
-            // 
-            Module_Code.HeaderText = "Module Code";
-            Module_Code.Name = "Module_Code";
-            // 
-            // Module_Name
-            // 
-            Module_Name.HeaderText = "Module Name";
-            Module_Name.Name = "Module_Name";
-            // 
-            // Description
-            // 
-            Description.HeaderText = "Description";
-            Description.Name = "Description";
-            // 
-            // Links
-            // 
-            Links.HeaderText = "Links";
-            Links.Name = "Links";
+            dgvModules.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvModules.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvModules.Location = new Point(12, 278);
+            dgvModules.Name = "dgvModules";
+            dgvModules.Size = new Size(942, 283);
+            dgvModules.TabIndex = 34;
+            dgvModules.SelectionChanged += dgvModules_SelectionChanged;
             // 
             // ViewAllModules
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(966, 573);
-            Controls.Add(dataGridView1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(dgvModules);
+            Controls.Add(btnDelete);
+            Controls.Add(btnSave);
             Controls.Add(btnLogout);
             Controls.Add(label3);
-            Controls.Add(richTextBox2);
-            Controls.Add(richTextBox1);
+            Controls.Add(rtbLinks);
+            Controls.Add(rtbDescription);
             Controls.Add(label7);
             Controls.Add(label2);
-            Controls.Add(textBox3);
+            Controls.Add(txtName);
             Controls.Add(label1);
-            Controls.Add(textBox2);
+            Controls.Add(txtCode);
             Controls.Add(btnSearch);
             Controls.Add(textBox1);
             Controls.Add(menuStrip1);
@@ -289,7 +267,7 @@
             Load += ViewAllModules_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvModules).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -305,23 +283,19 @@
         private ToolStripMenuItem moduleToolStripMenuItem;
         private ToolStripMenuItem viewAllToolStripMenuItem1;
         private ToolStripMenuItem createNewToolStripMenuItem1;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbDescription;
         private Label label7;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtName;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtCode;
         private Button btnSearch;
         private TextBox textBox1;
-        private RichTextBox richTextBox2;
+        private RichTextBox rtbLinks;
         private Label label3;
         private Button btnLogout;
-        private Button button1;
-        private Button button2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Module_Code;
-        private DataGridViewTextBoxColumn Module_Name;
-        private DataGridViewTextBoxColumn Description;
-        private DataGridViewTextBoxColumn Links;
+        private Button btnSave;
+        private Button btnDelete;
+        private DataGridView dgvModules;
     }
 }

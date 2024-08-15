@@ -1,6 +1,6 @@
 ﻿using Core;
 using Core.Interfaces;
-using Core.Models;
+using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
