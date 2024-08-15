@@ -98,10 +98,22 @@ namespace _578592_project_prg272.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(this.selectedModule != null)
+            if (this.selectedModule != null)
             {
                 _moduleService.updateModule(this.selectedModule);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<Module> modules = _moduleService.getAllModules();
+            string searchcode = txtSearch.Text;
+
+            List<Module> filteredModules = modules
+                .Where(module => module.code.ToString().Contains(searchcode))
+                .ToList();
+
+            dgvModules.DataSource = filteredModules;
         }
     }
 }

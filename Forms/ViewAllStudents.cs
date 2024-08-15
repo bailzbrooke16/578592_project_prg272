@@ -55,7 +55,7 @@ namespace _578592_project_prg272.Forms
 
         private void btnLinkModules_Click(object sender, EventArgs e)
         {
-            if(this.selectedStudent != null)
+            if (this.selectedStudent != null)
             {
                 LinkModules linkModules = new LinkModules(this.selectedStudent);
                 linkModules.Show();
@@ -120,6 +120,18 @@ namespace _578592_project_prg272.Forms
 
             _studentService.updateStudent(this.selectedStudent);
             dgvStudents.DataSource = _studentService.getAllStudents();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<Student> students = _studentService.getAllStudents();
+            string searchcode = txtSearch.Text;
+
+            List<Student> filteredStudents = students
+                .Where(student => student.number.ToString().Contains(searchcode))
+                .ToList();
+
+            dgvStudents.DataSource = filteredStudents;
         }
     }
 }

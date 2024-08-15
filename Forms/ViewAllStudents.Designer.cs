@@ -38,7 +38,7 @@
             viewAllToolStripMenuItem1 = new ToolStripMenuItem();
             createNewToolStripMenuItem1 = new ToolStripMenuItem();
             btnLogout = new Button();
-            textBox1 = new TextBox();
+            txtSearch = new TextBox();
             btnSearch = new Button();
             txtFirstName = new TextBox();
             label1 = new Label();
@@ -60,6 +60,7 @@
             label8 = new Label();
             pbImage = new PictureBox();
             dgvStudents = new DataGridView();
+            label9 = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
@@ -139,21 +140,22 @@
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += logoutToolStripMenuItem_Click;
             // 
-            // textBox1
+            // txtSearch
             // 
-            textBox1.Location = new Point(21, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 23);
-            textBox1.TabIndex = 4;
+            txtSearch.Location = new Point(12, 63);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(292, 23);
+            txtSearch.TabIndex = 4;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(319, 33);
+            btnSearch.Location = new Point(329, 61);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(87, 24);
             btnSearch.TabIndex = 5;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtFirstName
             // 
@@ -329,11 +331,21 @@
             dgvStudents.TabIndex = 26;
             dgvStudents.SelectionChanged += dgvStudents_SelectionChanged;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(171, 45);
+            label9.Name = "label9";
+            label9.Size = new Size(133, 15);
+            label9.TabIndex = 27;
+            label9.Text = "Student Number Search";
+            // 
             // ViewAllStudents
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1126, 647);
+            Controls.Add(label9);
             Controls.Add(dgvStudents);
             Controls.Add(pbImage);
             Controls.Add(label8);
@@ -355,7 +367,7 @@
             Controls.Add(label1);
             Controls.Add(txtFirstName);
             Controls.Add(btnSearch);
-            Controls.Add(textBox1);
+            Controls.Add(txtSearch);
             Controls.Add(btnLogout);
             Controls.Add(menuStrip1);
             Name = "ViewAllStudents";
@@ -381,7 +393,7 @@
         private ToolStripMenuItem viewAllToolStripMenuItem1;
         private ToolStripMenuItem createNewToolStripMenuItem1;
         private Button btnLogout;
-        private TextBox textBox1;
+        private TextBox txtSearch;
         private Button btnSearch;
         private TextBox txtFirstName;
         private Label label1;
@@ -403,5 +415,6 @@
         private Label label8;
         private PictureBox pbImage;
         private DataGridView dgvStudents;
+        private Label label9;
     }
 }

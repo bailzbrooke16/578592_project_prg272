@@ -44,13 +44,14 @@
             label1 = new Label();
             txtCode = new TextBox();
             btnSearch = new Button();
-            textBox1 = new TextBox();
+            txtSearch = new TextBox();
             rtbLinks = new RichTextBox();
             label3 = new Label();
             btnLogout = new Button();
             btnSave = new Button();
             btnDelete = new Button();
             dgvModules = new DataGridView();
+            label4 = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvModules).BeginInit();
             SuspendLayout();
@@ -170,19 +171,20 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(310, 26);
+            btnSearch.Location = new Point(317, 54);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(87, 24);
             btnSearch.TabIndex = 22;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
-            // textBox1
+            // txtSearch
             // 
-            textBox1.Location = new Point(12, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 23);
-            textBox1.TabIndex = 21;
+            txtSearch.Location = new Point(12, 56);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(292, 23);
+            txtSearch.TabIndex = 21;
             // 
             // rtbLinks
             // 
@@ -241,11 +243,21 @@
             dgvModules.TabIndex = 34;
             dgvModules.SelectionChanged += dgvModules_SelectionChanged;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(187, 35);
+            label4.Name = "label4";
+            label4.Size = new Size(117, 15);
+            label4.TabIndex = 35;
+            label4.Text = "Module Code Search";
+            // 
             // ViewAllModules
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(966, 573);
+            Controls.Add(label4);
             Controls.Add(dgvModules);
             Controls.Add(btnDelete);
             Controls.Add(btnSave);
@@ -259,7 +271,7 @@
             Controls.Add(label1);
             Controls.Add(txtCode);
             Controls.Add(btnSearch);
-            Controls.Add(textBox1);
+            Controls.Add(txtSearch);
             Controls.Add(menuStrip1);
             Name = "ViewAllModules";
             StartPosition = FormStartPosition.CenterScreen;
@@ -290,12 +302,13 @@
         private Label label1;
         private TextBox txtCode;
         private Button btnSearch;
-        private TextBox textBox1;
+        private TextBox txtSearch;
         private RichTextBox rtbLinks;
         private Label label3;
         private Button btnLogout;
         private Button btnSave;
         private Button btnDelete;
         private DataGridView dgvModules;
+        private Label label4;
     }
 }
