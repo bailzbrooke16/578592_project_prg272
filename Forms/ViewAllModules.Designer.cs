@@ -166,6 +166,7 @@
             // 
             txtCode.Location = new Point(36, 100);
             txtCode.Name = "txtCode";
+            txtCode.ReadOnly = true;
             txtCode.Size = new Size(191, 23);
             txtCode.TabIndex = 23;
             // 

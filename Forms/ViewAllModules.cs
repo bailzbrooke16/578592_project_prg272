@@ -98,8 +98,12 @@ namespace _578592_project_prg272.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             if (this.selectedModule != null)
             {
+                this.selectedModule.name = txtName.Text;
+                this.selectedModule.description = rtbDescription.Text;
+                this.selectedModule.links = rtbLinks.Text;
                 _moduleService.updateModule(this.selectedModule);
             }
         }

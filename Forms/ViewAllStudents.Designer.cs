@@ -61,6 +61,8 @@
             pbImage = new PictureBox();
             dgvStudents = new DataGridView();
             label9 = new Label();
+            btnImageUpload = new Button();
+            openFileDialog1 = new OpenFileDialog();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
@@ -340,11 +342,26 @@
             label9.TabIndex = 27;
             label9.Text = "Student Number Search";
             // 
+            // btnImageUpload
+            // 
+            btnImageUpload.Location = new Point(882, 256);
+            btnImageUpload.Name = "btnImageUpload";
+            btnImageUpload.Size = new Size(75, 23);
+            btnImageUpload.TabIndex = 28;
+            btnImageUpload.Text = "Upload";
+            btnImageUpload.UseVisualStyleBackColor = true;
+            btnImageUpload.Click += btnImageUpload_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ViewAllStudents
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1126, 647);
+            Controls.Add(btnImageUpload);
             Controls.Add(label9);
             Controls.Add(dgvStudents);
             Controls.Add(pbImage);
@@ -416,5 +433,7 @@
         private PictureBox pbImage;
         private DataGridView dgvStudents;
         private Label label9;
+        private Button btnImageUpload;
+        private OpenFileDialog openFileDialog1;
     }
 }

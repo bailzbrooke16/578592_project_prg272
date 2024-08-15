@@ -133,5 +133,31 @@ namespace _578592_project_prg272.Forms
 
             dgvStudents.DataSource = filteredStudents;
         }
+
+        private void btnImageUpload_Click(object sender, EventArgs e)
+        {
+            if(this.selectedStudent != null)
+            {
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                {
+                    openFileDialog.Filter = "All files (*.*)|*.*";
+                    openFileDialog.FilterIndex = 1;
+                    openFileDialog.Multiselect = false;
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        this.selectedStudent.image = File.ReadAllBytes(filePath);
+
+                        using (MemoryStream ms = new MemoryStream(this.selectedStudent.image))
+                        {
+                            Image image = Image.FromStream(ms);
+                            pbImage.Image = image;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
