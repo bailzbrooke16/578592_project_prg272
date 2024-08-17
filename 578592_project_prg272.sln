@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "578592_project_prg272", "578592_project_prg272.csproj", "{A798970A-101E-4762-AECD-5C835FBC2D8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "578592_project_prg272", "578592_project_prg272\578592_project_prg272.csproj", "{A798970A-101E-4762-AECD-5C835FBC2D8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "..\DataLayer\DataLayer.csproj", "{8B935B46-9D0E-4805-8C4C-FA2B8CB2F47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{8B935B46-9D0E-4805-8C4C-FA2B8CB2F47E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "..\Core\Core.csproj", "{240A1449-CFDE-461A-8A1D-A2DF00EA4315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{240A1449-CFDE-461A-8A1D-A2DF00EA4315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
